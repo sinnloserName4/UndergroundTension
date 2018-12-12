@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA23C82D-E12A-40AE-B321-B10B64A674A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameJam</RootNamespace>
+    <AssemblyName>GameJam</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Nils\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0673C92ABE87454E8E09C2E96CC404CEEC0061D4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GameJam_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sfmlnet-audio-2">
+      <HintPath>..\..\..\libs\SFML.Net-2.1\lib\sfmlnet-audio-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-graphics-2">
+      <HintPath>..\..\..\libs\SFML.Net-2.1\lib\sfmlnet-graphics-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2">
+      <HintPath>..\..\..\libs\SFML.Net-2.1\lib\sfmlnet-window-2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Character\Ally.cs" />
+    <Compile Include="Character\Enemy.cs" />
+    <Compile Include="Utilities\GameInstructor.cs" />
+    <Compile Include="Objects\Bullet.cs" />
+    <Compile Include="Objects\Objects.cs" />
+    <Compile Include="Utilities\Debug.cs" />
+    <Compile Include="Utilities\Helper.cs" />
+    <Compile Include="Utilities\Camera.cs" />
+    <Compile Include="Character\Character.cs" />
+    <Compile Include="Character\Hero.cs" />
+    <Compile Include="Utilities\Control.cs" />
+    <Compile Include="Map\Map.cs" />
+    <Compile Include="Utilities\Enums.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameStates\Editor.cs" />
+    <Compile Include="GameStates\Menu.cs" />
+    <Compile Include="Utilities\IGameState.cs" />
+    <Compile Include="Map\Field.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateFiles\AbstractGame.cs" />
+    <Compile Include="TemplateFiles\GameTime.cs" />
+    <Compile Include="TemplateFiles\KeyboardInput.cs" />
+    <Compile Include="TemplateFiles\MouseInput.cs" />
+    <Compile Include="TemplateFiles\Vec2f.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="GameJam_TemporaryKey.pfx" />
+    <None Include="Resources\arial.ttf" />
+    <None Include="Resources\Thumbs.db" />
+    <None Include="Resources\Tiles\BackUp\Thumbs.db" />
+    <None Include="Resources\Tiles\Thumbs.db" />
+    <None Include="Resources\UI_Icons\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="csfml-audio-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-graphics-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-window-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="openal32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\allySpecialTile.png" />
+    <Content Include="Resources\allyTile.png" />
+    <Content Include="Resources\charTile.png" />
+    <Content Include="Resources\enemy1Tile.png" />
+    <Content Include="Resources\enemy2Tile.png" />
+    <Content Include="Resources\fx\Ally\aAttack1.wav" />
+    <Content Include="Resources\fx\Ally\aAttack2.wav" />
+    <Content Include="Resources\fx\Ally\aAttack3.wav" />
+    <Content Include="Resources\fx\Ally\aDig.wav" />
+    <Content Include="Resources\fx\Ally\aMove1.wav" />
+    <Content Include="Resources\fx\Ally\aWin1.wav" />
+    <Content Include="Resources\fx\death1.wav" />
+    <Content Include="Resources\fx\death2.wav" />
+    <Content Include="Resources\fx\Hero\Alternative\hMove2.wav" />
+    <Content Include="Resources\fx\Hero\Alternative\hMove3.wav" />
+    <Content Include="Resources\fx\Hero\hAttack1.wav" />
+    <Content Include="Resources\fx\Hero\hAttack2.wav" />
+    <Content Include="Resources\fx\Hero\hAttack3.wav" />
+    <Content Include="Resources\fx\Hero\hAttack4.wav" />
+    <Content Include="Resources\fx\Hero\hAttack5.wav" />
+    <Content Include="Resources\fx\Hero\hAttack6.wav" />
+    <Content Include="Resources\fx\Hero\hConquer1.wav" />
+    <Content Include="Resources\fx\Hero\hFun1.wav" />
+    <Content Include="Resources\fx\Hero\hFun2.wav" />
+    <Content Include="Resources\fx\Hero\hFun3.wav" />
+    <Content Include="Resources\fx\Hero\hMove1.wav" />
+    <Content Include="Resources\fx\Hero\hMove2.wav" />
+    <Content Include="Resources\fx\Hero\hMove3.wav" />
+    <Content Include="Resources\fx\Shoot.wav" />
+    <Content Include="Resources\Soundtrack\Forward.wav" />
+    <Content Include="Resources\Soundtrack\UndergroundTension.wav" />
+    <Content Include="Resources\Tiles\DownLeftInner.png" />
+    <Content Include="Resources\Tiles\DownRightInner.png" />
+    <Content Include="Resources\Tiles\Floor1.png" />
+    <Content Include="Resources\Tiles\Left.png" />
+    <Content Include="Resources\Tiles\LowerLeft.png" />
+    <Content Include="Resources\Tiles\LowerMid.png" />
+    <Content Include="Resources\Tiles\LowerRight.png" />
+    <Content Include="Resources\Tiles\Right.png" />
+    <Content Include="Resources\Tiles\UpLeftInner.png" />
+    <Content Include="Resources\Tiles\Upper.png" />
+    <Content Include="Resources\Tiles\UpperLeft.png" />
+    <Content Include="Resources\Tiles\UpperMid.png" />
+    <Content Include="Resources\Tiles\UpperRight.png" />
+    <Content Include="Resources\Tiles\UpRightInner.png" />
+    <Content Include="Resources\UI_Icons\IconAlly.png" />
+    <Content Include="Resources\UI_Icons\IconGranate.png" />
+    <Content Include="Resources\UI_Icons\IconHeld.png" />
+    <Content Include="Resources\UI_Icons\IconManualFire.png" />
+    <Content Include="Resources\UserInterface.png" />
+    <Content Include="Resources\White.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
